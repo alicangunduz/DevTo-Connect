@@ -11,8 +11,7 @@ async function getArticles() {
   };
   const data = await fetch(
     "https://dev.to/api/articles/me/published",
-    requestOptions,
-    { cache: "no-store" }
+    requestOptions
   );
   return data.json();
 }

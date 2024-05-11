@@ -13,9 +13,7 @@ async function getUser() {
     headers: myHeaders,
     redirect: "follow",
   };
-  const data = await fetch("https://dev.to/api/users/me", requestOptions, {
-    cache: "no-store",
-  });
+  const data = await fetch("https://dev.to/api/users/me", requestOptions);
   return data.json();
 }
 

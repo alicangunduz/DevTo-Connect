@@ -13,9 +13,7 @@ async function getUser() {
     headers: myHeaders,
     redirect: "follow",
   };
-  const data_user = await fetch("https://dev.to/api/users/me", requestOptions, {
-    cache: "no-store",
-  });
+  const data_user = await fetch("https://dev.to/api/users/me", requestOptions);
   return data_user.json();
 }
 
@@ -26,8 +24,7 @@ async function getArticle(username, slug) {
   };
   const dataArticle = await fetch(
     `https://dev.to/api/articles/${username}/${slug}`,
-    requestOptions,
-    { cache: "no-store" }
+    requestOptions
   );
   return dataArticle.json();
 }
