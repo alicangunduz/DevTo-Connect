@@ -1,0 +1,90 @@
+/* Makale içeriği */
+.article-content {
+  p {
+    font-family: sans-serif; /* Choose a font family */
+    font-size: 16px; /* Set the font size */
+    line-height: 1.5; /* Set the line height */
+    margin: 1em 0; /* Adjust spacing between paragraphs */
+    padding: 0.5em; /* Set paragraph margins */
+    color: #333; /* Set text color */
+    /* Set paragraph styles */
+  }
+
+  li {
+    margin: 0.5em 0; /* Adjust spacing between list items */
+    padding: 0.2em; /* Set list item margins */
+  }
+
+  ol {
+    list-style-type: lower-alpha;
+    list-style: decimal; /* Remove list markers */
+    padding: 0.5em; /* Reset list padding */
+    list-style-position: inside;
+  }
+
+  ul {
+    list-style-type: square;
+    list-style: disc; /* Remove list markers */
+    padding: 0.5em; /* Set quote margins */
+    margin: 1em 0; /* Adjust spacing between quotes */
+    list-style-position: inside;
+  }
+
+  a {
+    color: #0070f3; /* Set link color */
+    text-decoration: none; /* Remove link underline */
+  }
+
+  blockquote {
+    font-style: italic; /* Set quote style */
+    border-left: 4px solid #000000; /* Set quote border */
+    padding: 0.5em; /* Set quote margins */
+    margin: 1em 0; /* Adjust spacing between quotes */
+    background-color: rgb(237, 237, 237);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  h2 {
+    font-size: 24px; /* Set heading size */
+    margin: 0.5em 0; /* Adjust spacing between headings */
+    padding: 0.2em; /* Set heading margins */
+    color: #333; /* Set heading color */
+  }
+
+  code {
+    font-family: monospace; /* Set code font family */
+    font-size: 14px; /* Set code font size */
+    text-color: #f5f5f5; /* Set code background color */
+    padding: 0.2em; /* Set code margins */
+    border-radius: 4px; /* Set code border radius */
+    display: block;
+    white-space: pre-wrap;
+  }
+
+  pre {
+    position: relative;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    color: #f9fafb;
+    background-color: #111827;
+    overflow-x: auto;
+    border-radius: 0.375rem;
+  }
+
+  img {
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Styles for smaller screens (tablets and mobiles) */
+  .article-content {
+  }
+}
+
+@media (max-width: 480px) {
+  /* Styles for very small screens (mobiles) */
+  .article-content {
+    /* Adjust styles here */
+  }
+}
