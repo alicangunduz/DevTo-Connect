@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# DevTo-Connect
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This project allows you to build a blog using the dev.to API and Next.js, and deploy it to a custom domain. This means you can have a fully functional blog with all the features of dev.to, but with your own branding and domain name.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## How to set it up
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+ 1. Log in or create a Vercel account if you have one
+ 2. Fork the project
+ 3. Click add new project in Vercel
+ 4. Select the project you forked
+ 5. Go to dev.to, go to settings, then extensions, then create an api key from the bottom
+ 6. Define your Environment Variables API_KEY and DATE_FORMAT variables in vercel
+ 7. Click on the buy deploy button
+ 8. The blog is now ready! 🥳
+  
+## Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+You can examine the demo here : https://dev-to-connect.vercel.app/ You can see how the components look with this article : https://dev-to-connect.vercel.app/test-post-14a
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![image](https://github.com/alicangunduz/DevTo-Connect/assets/54004830/6e3b9b1e-3081-4422-9973-ba93c522b56f)
 
-## Deploy on Vercel
+![image](https://github.com/alicangunduz/DevTo-Connect/assets/54004830/6e838050-a0bc-4e48-8ec4-9f3773dc4ea4)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  
+## Support
+
+If you want to support, you can use the github sponsor section. This motivates me a lot for development.
+
+## Contribution
+Contributions are always welcome!
+
+To get started see `Contributor.md.
+
+Please follow the `rules of behaviour` of this project.
+
+  
+## Feedback
+
+You can send me feedback via hi@alicangunduz.com.
+  
