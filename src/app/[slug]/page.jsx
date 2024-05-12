@@ -24,7 +24,8 @@ async function getArticle(username, slug) {
   };
   const dataArticle = await fetch(
     `https://dev.to/api/articles/${username}/${slug}`,
-    requestOptions
+    requestOptions,
+    { cache: "no-store" }
   );
   return dataArticle.json();
 }
@@ -34,7 +35,7 @@ async function page({ params: slug }) {
   const usernames = user.username;
   const slugs = slug.slug;
   const article = await getArticle(usernames, slugs);
-  const content = article.body_html.replace(
+  const content = await article.body_html?.replace(
     /<div class="highlight__panel js-actions-panel">[\s\S]*?<\/div>/g,
     ""
   );
