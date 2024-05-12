@@ -2,7 +2,7 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 
 function index({ tag }) {
-  let tagclass = "ml-2 px-2 py-1 rounded-full text-xs font-semibold";
+  let tagclass = "ml-2 px-2 py-1 mb-3 rounded-full text-xs font-semibold";
   let randomColorTailWindCSS = [
     "bg-blue-100 text-blue-800 hover:bg-blue-200",
     "bg-red-100 text-red-800 hover:bg-red-200",
