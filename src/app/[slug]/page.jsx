@@ -1,8 +1,9 @@
+"use server";
 import React from "react";
 import "./slug.css";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import Tag from "@/components/custom/Tag";
+import ArticlePage from "@/components/custom/ArticlePage";
 
 async function getUser() {
   const myHeaders = new Headers();
@@ -33,12 +34,8 @@ async function getArticle(username, slug) {
 async function page({ params: slug }) {
   const user = await getUser();
   const usernames = user.username;
-  const slugs = slug.slug;
-  const article = await getArticle(usernames, slugs);
-  const content = await article.body_html?.replace(
-    /<div class="highlight__panel js-actions-panel">[\s\S]*?<\/div>/g,
-    ""
-  );
+  let slugs = slug.slug;
+  let article = await getArticle(usernames, slugs);
 
   return (
     <>
@@ -54,27 +51,7 @@ async function page({ params: slug }) {
       <main className="flex flex-col">
         <div className="container px-4 md:px-6 mx-auto max-w-14xl">
           <div className="grid gap-8 items-center">
-            <section className="w-full pb-20 pt-10 text-wrap  md:pb-32">
-              <h2
-                className="text-3xl font-bold mb-4 justify-center text-center"
-                id="posts-heading"
-              >
-                {article.title}
-              </h2>
-              <div className="grid gap-8">
-                {
-                  <div
-                    className="prose lg:prose-lg  article-content"
-                    dangerouslySetInnerHTML={{ __html: content }}
-                  ></div>
-                }
-              </div>
-              <div className="flex flex-wrap justify-center">
-                {article.tags?.map((tag) => (
-                  <Tag key={tag} tag={tag} />
-                ))}
-              </div>
-            </section>
+            <ArticlePage article={article} />
           </div>
         </div>
       </main>
@@ -82,4 +59,4 @@ async function page({ params: slug }) {
   );
 }
 
-export default dynamic(() => Promise.resolve(page), { ssr: false });
+export default dynamic(() => Promise.resolve(page), { ssr: true });
