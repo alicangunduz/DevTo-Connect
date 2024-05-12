@@ -1,4 +1,3 @@
-"use server";
 import React from "react";
 import "./slug.css";
 import Link from "next/link";
@@ -59,4 +58,5 @@ async function page({ params: slug }) {
   );
 }
 
-export default dynamic(() => Promise.resolve(page), { ssr: true });
+export const revalidate = 1;
+export default dynamic(() => Promise.resolve(page), { ssr: false });

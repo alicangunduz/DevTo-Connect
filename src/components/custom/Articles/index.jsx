@@ -43,3 +43,5 @@ export default async function index() {
     </>
   );
 }
+
+export const revalidate = 1;
